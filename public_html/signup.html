@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" >
+        <script type="text/javascript" src="bootstrap/js/jQuery.htm"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <title> FLIGHT INFORMATION SYSTEM </title>
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <link rel="stylesheet" href="css.css" type="text/css"/>
+
+<style>
+.container1
+{
+float: left;
+width: 120%;
+}
+.column {
+  width: 45%;
+float:left;
+padding-left: 20px;
+padding-right: 50px;
+}
+
+.column2{
+  width: 45%;
+float:left;
+padding-left: 0px;
+padding-right:50px;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0,0.7);
+  transition: opacity 700ms;
+  visibility: hidden;
+  opacity: 0.1;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 0.9;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 35%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  
+}
+
+
+
+</style>
+    </head>
+    <body background="img/forregistrationform.jpg">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand"><span class="glyphicon glyphicon-home"></span> HOME</a>
+            </div>  
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contactus.html"><span class="glyphicon glyphicon-user"></span> Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+
+            <div class="row row_style">
+                <div class="col-xs-5 col-xs-offset-1">	
+        <div class="panel panel-primary">
+        <div class="panel-body" style="background-color:rgb(173,214,255);">
+        <div class="container1" >
+ <div class="row">
+<center><h3><b><u>REGISTER</u><br></b></h3></center>
+ <div class="column">
+            <form>
+                <div class="form-group">
+			<Label>First Name : </Label><span style="color:Tomato;"><b> * </b></span>
+                        <input type="text"  class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+			<Label>Last Name:</Label>
+                        <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+			<Label>Date Of Birth:</Label><span style="color:Tomato;"><b> * </b></span>
+                        <input type="text"  class="form-control" placeholder="dd/mm/yyyy">
+                        </div>
+                        <div class="form-group">
+			<Label>Email:</Label><span style="color:Tomato;"><b> * </b></span>
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+			<Label>Password:</Label><span style="color:Tomato;"><b> * </b></span>
+                            <input type="text" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+			<Label>Confirm Password:</Label><span style="color:Tomato;"><b> * </b></span>
+                            <input type="text" class="form-control" placeholder="Confirm Password">
+                        </div>
+            </form>
+</div>
+  <div class="column2">
+            <form>
+                <div class="form-group">
+			<Label>Contact Number:</Label><span style="color:Tomato;"><b> * </b></span>
+                            <input type="text" class="form-control" placeholder="Contact">
+                        </div>
+                        <div class="form-group">
+			<Label>Address:</Label>
+                            <input type="text" class="form-control" placeholder="Address">
+                        </div>
+			<div class="form-group">
+			<Label>Pincode:</Label>
+                            <input type="text" class="form-control" placeholder="Pincode">
+                        </div>
+                        <div class="form-group">
+			<Label>City:</Label>
+                            <input type="text" class="form-control" placeholder="City">
+                        </div>
+			<div class="form-group">
+			<Label>State:</Label><span style="color:Tomato;"><b> * </b></span>
+                            <input type="text" class="form-control" placeholder="State">
+                        </div>
+			<div class="form-group">
+			<Label>Country:</Label><span style="color:Tomato;"><b> * </b></span>
+                            <input type="text" class="form-control" placeholder="Country">
+                        </div>
+                        </div>
+            </form>
+        </div>
+<center>
+	<a href="#popup1"><button class="btn btn-primary">Submit</button></a>
+</center>
+<br>
+ 
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+			<center><h2><b> CONFIRMATION </b></h2></center><br>
+	<a class="close" href="flightdetails.html">&times;</a>
+<div class="content">
+    <div class="container" >
+                <div class="col-xs-5"  >
+                    <div class="jumbotron">
+                        <h2 style="color:darkgreen">Registration Successful !</h2><br>
+                        <b><p>You can now BOOK YOUR TICKETS with 
+			<br><br><b>USERNAME: </b>Adithya
+                        </p></b>
+                    </div><!Jumbotron-->
+                </div>
+            </div>
+</div>
+</div>
+
+</div>
+		</div>
+            </div></div></div>
+  </div>
+
+
+
+    </body>
+</html>
